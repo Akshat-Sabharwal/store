@@ -3,7 +3,7 @@ import {
   GithubAuthProvider,
   GoogleAuthProvider,
   onAuthStateChanged,
-  signInWithPopup,
+  signInWithRedirect,
 } from "firebase/auth";
 import { useState } from "react";
 import { FaGithub } from "react-icons/fa";
@@ -14,12 +14,12 @@ const { auth } = useFirebase();
 
 const signUpGoogle = async () => {
   const google = new GoogleAuthProvider();
-  await signInWithPopup(auth, google);
+  await signInWithRedirect(auth, google);
 };
 
 const signUpGithub = async () => {
   const github = new GithubAuthProvider();
-  await signInWithPopup(auth, github);
+  await signInWithRedirect(auth, github);
 };
 
 const Login = () => {
@@ -102,6 +102,7 @@ export const Auth = () => {
 
   onAuthStateChanged(auth, () => {
     if (auth.currentUser) {
+      console.log(auth.currentUser);
       navigate("/dashboard/");
     }
   });
