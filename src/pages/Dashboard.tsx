@@ -258,7 +258,7 @@ export const Dashboard = () => {
             <img
               src={auth.currentUser?.photoURL as string}
               className="hidden sm:inline size-10 rounded-md cursor-pointer"
-              onClick={() => navigate("/dashboard/settings")}
+              onClick={() => navigate("/settings/")}
             />
           )}
         </div>
