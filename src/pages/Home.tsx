@@ -6,7 +6,7 @@ export const Home: FC = () => {
   const navigate = useNavigate();
 
   return (
-    <div className="flex flex-col justify-start items-center size-full">
+    <div className="flex flex-col justify-start items-center size-full max-h-full">
       <div className="size-full flex flex-col justify-center items-center rounded-lg bg-white shadow-md">
         <div className="flex flex-col justify-center items-center -mt-[3rem] sm:-mt-[6rem]">
           <p className="text-accent-800 text-[5rem] sm:text-[10rem] -mb-4 sm:-mb-8 opacity-80">

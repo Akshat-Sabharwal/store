@@ -72,9 +72,15 @@ export const History: FC = () => {
           <table className="w-full table-auto">
             <thead className="w-full text-left mb-6">
               <tr className="border-b-2 border-zinc-200 text-accent-600 text-lg font-normal">
-                <th className="font-normal text-xl pb-2">Filename</th>
-                <th className="font-normal text-xl pb-2 pl-6 sm:pl-12">Size</th>
-                <th className="font-normal text-xl pb-2">Created At</th>
+                <th className="font-normal text-lg sm:text-xl pb-2">
+                  Filename
+                </th>
+                <th className="font-normal text-lg sm:text-xl pb-2 pl-6 sm:pl-12">
+                  Size
+                </th>
+                <th className="font-normal text-lg sm:text-xl pb-2">
+                  Created At
+                </th>
               </tr>
             </thead>
             <tbody>

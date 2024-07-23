@@ -102,14 +102,13 @@ export const Auth = () => {
 
   onAuthStateChanged(auth, () => {
     if (auth.currentUser) {
-      console.log(auth.currentUser);
       navigate("/dashboard/");
     }
   });
 
   return (
-    <div className="size-full flex flex-col justify-center items-center">
-      <div className="flex flex-col justify-start items-center size-full overflow-y-scroll pt-24 shadow-sm rounded-lg bg-white">
+    <div className="size-full flex flex-col justify-center items-center h-full">
+      <div className="flex flex-col justify-start items-center size-full pt-24 sm:pt-32 shadow-sm rounded-lg bg-white">
         <div className="max-w-[30rem] flex flex-col justify-start items-center gap-6">
           <h1 className="text-accent-800 text-5xl md:text-6xl mb-4">store</h1>
           <>

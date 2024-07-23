@@ -6,7 +6,7 @@ type BackdropProps = {
 
 export const Backdrop: FC<BackdropProps> = ({ children }) => {
   return (
-    <div className="flex justify-between items-start w-screen h-screen p-2 lg:p-8 gap-20 bg-accent-400 overflow-y-hidden">
+    <div className="flex justify-between items-start w-screen min-h-screen h-screen p-2 sm:p-4 md:p-8 gap-20 bg-accent-400 overflow-y-hidden">
       {children}
     </div>
   );

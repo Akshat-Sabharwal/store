@@ -62,6 +62,7 @@ export const HistoryProvider: FC<TProvider> = ({ children }) => {
         newFilteredHistory.push(file);
       });
 
+      console.log(newHistory);
       setHistory(newHistory);
       setFilteredHistory(newFilteredHistory);
     };
@@ -72,11 +73,9 @@ export const HistoryProvider: FC<TProvider> = ({ children }) => {
     }
   }, [updater, db, auth.currentUser?.uid]);
 
-  useEffect(() => {
-    setTimeout(() => {
-      setBuffer(false);
-    }, 5000);
-  }, [history]);
+  setTimeout(() => {
+    setBuffer(false);
+  }, 5000);
 
   const reload = () => {
     setBuffer(true);

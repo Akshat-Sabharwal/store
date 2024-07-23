@@ -21,7 +21,7 @@ type FileProps = {
 
 export const FileSkeleton: FC = () => {
   return (
-    <div className="flex flex-col justify-start items-center p-2 pb-0 rounded-xl bg-zinc-200 w-[3rem] h-[4rem] sm:w-[9rem] sm:max-w-[9rem] sm:h-[12rem] sm:max-h-[18rem] animate-pulse">
+    <div className="flex flex-col justify-start items-center p-2 pb-0 rounded-xl bg-zinc-200 w-[8rem] h-[9rem] sm:w-[9rem] sm:max-w-[9rem] sm:h-[12rem] sm:max-h-[18rem] animate-pulse">
       <div className="flex justify-start items-center h-[7rem] w-[97%] bg-white rounded-xl"></div>
       <span className="w-[70%] h-5 bg-zinc-300 my-3 rounded-md self-start ml-1"></span>
     </div>
@@ -215,9 +215,11 @@ export const File: FC<FileProps> = (props) => {
         <>
           <Overlay />
 
-          <div className="absolute z-50 pt-20 top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] h-full w-full max-w-[20rem] md:max-w-[55rem] bg-[#f6f6f6] overflow-y-scroll text-md overscroll-none code-preview">
+          <div className="absolute z-50 pt-20 top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] size-full max-w-full md:max-w-[60rem] bg-[#f6f6f6] overflow-scroll text-sm sm:text-md overscroll-none code-preview">
             <div className="absolute w-full top-0 left-0 flex justify-between items-center px-5 py-4 bg-accent-400 text-accent-800">
-              <p className="text-xl truncate max-w-[50ch]">{props.file.name}</p>
+              <p className="text-lg sm:text-xl truncate max-w-[50ch]">
+                {props.file.name}
+              </p>
               <button
                 className="mb-1 text-2xl"
                 onClick={() => setEditor(false)}
@@ -232,9 +234,9 @@ export const File: FC<FileProps> = (props) => {
               showLineNumbers
               lineNumberStyle={{
                 width: "1rem",
-                paddingRight: "1rem",
-                paddingLeft: "0.5rem",
+                paddingInline: "0rem",
                 marginRight: "1.3rem",
+                textWrap: "nowrap",
                 color: "rgba(0, 0, 0, 0.2)",
               }}
             >
@@ -244,7 +246,7 @@ export const File: FC<FileProps> = (props) => {
         </>
       ) : null}
 
-      <div className="flex flex-col justify-start items-center p-2 pb-0 rounded-xl bg-accent-400 w-full max-w-[12rem] h-[8rem] sm:w-[9rem] sm:max-w-[9rem] sm:h-[10rem] sm:max-h-[18rem]">
+      <div className="flex flex-col justify-start items-center p-2 pb-0 rounded-xl bg-accent-400 w-full max-w-[8rem] h-[9rem] sm:w-[9rem] sm:max-w-[9rem] sm:h-[10rem] sm:max-h-[18rem]">
         <div
           className="flex justify-center items-center h-[7rem] w-[97%] bg-white rounded-xl text-accent-600 text-xl select-none cursor-pointer"
           onClick={openFile}
@@ -254,12 +256,12 @@ export const File: FC<FileProps> = (props) => {
         <div className="relative flex justify-between items-center w-full pl-2 gap-4 text-nowrap">
           <div className="w-[70%] group">
             <p
-              className="font-medium text-accent-800 text-lg sm:text-xl mt-3 mb-2 select-none cursor-pointer truncate"
+              className="font-medium text-accent-800 text-lg sm:text-xl my-1.5 sm:mt-3 sm:mb-2 select-none cursor-pointer truncate"
               onClick={openFile}
             >
               {name}
             </p>
-            <p className="hidden group-hover:block absolute -translate-x-3 min-w-fit bg-white shadow-md rounded-lg p-2.5 pb-2 text-accent-800">
+            <p className="hidden sm:group-hover:block absolute -translate-x-3 min-w-fit bg-white shadow-md rounded-lg p-2.5 pb-2 text-accent-800">
               {name}
             </p>
           </div>

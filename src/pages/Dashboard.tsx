@@ -98,7 +98,6 @@ const UploadModal: FC<UploadModalTypes> = ({ modalUtils }) => {
     });
 
     handleFileDiscard();
-
     wait(1500, reloadFiles);
   };
 
@@ -109,7 +108,7 @@ const UploadModal: FC<UploadModalTypes> = ({ modalUtils }) => {
         modalRef={modalUtils.modalRef}
         onClick={handleFileDiscard}
       />
-      <div className="flex flex-col justify-start items-start gap-8 sm:mx-1 w-full">
+      <div className="flex flex-col justify-start items-start gap-8 w-full">
         <input
           ref={fileInputRef}
           className="hidden"
@@ -131,7 +130,7 @@ const UploadModal: FC<UploadModalTypes> = ({ modalUtils }) => {
           <>
             {fileInput == null ? (
               <div
-                className="flex justify-center items-center w-full py-4 sm:py-12 border-2 border-dashed text-3xl text-zinc-300 border-zinc-300 rounded-xl cursor-pointer"
+                className="flex justify-center items-center w-full py-8 sm:py-12 border-2 border-dashed text-3xl text-zinc-300 border-zinc-300 rounded-xl cursor-pointer"
                 onClick={() => fileInputRef.current?.click()}
               >
                 <GrAdd />
@@ -149,7 +148,7 @@ const UploadModal: FC<UploadModalTypes> = ({ modalUtils }) => {
                   />
                 )}
                 <span className="flex justify-between items-center w-full mr-3 text-zinc-600">
-                  <p className="ml-3 text-zinc-600 text-lg py-2 m:text-xl max-w-[10rem] truncate">
+                  <p className="ml-3 text-zinc-600 text-lg py-2 md:text-xl max-w-[10rem] truncate">
                     {fileInput?.name}
                   </p>
                   <button className="p-2 text-xl" onClick={handleFileDiscard}>
@@ -234,12 +233,12 @@ export const Dashboard = () => {
       </Menu>
 
       <Sidebar />
-      <div className="flex flex-col justify-start items-start size-full gap-6">
-        <div className="flex justify-between items-start w-full">
-          <div className="flex justify-start items-center gap-2">
+      <div className="flex flex-col justify-start items-start size-full gap-6 min-w-[260px]">
+        <div className="flex justify-between items-start w-full gap-6">
+          <div className="flex w-full justify-between sm:justify-start items-center gap-2">
             <SearchBar />
             <button
-              className="hidden sm:inline text-3xl text-accent-600 hover:rotate-45 duration-300"
+              className="hidden md:inline text-3xl text-accent-600 hover:rotate-45 duration-300"
               onClick={handleReload}
             >
               <IoReload />

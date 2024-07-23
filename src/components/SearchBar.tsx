@@ -27,10 +27,12 @@ export const SearchBar: FC = () => {
 
     switch (url) {
       case "/dashboard/":
+      case "/dashboard":
         filterFiles(e);
         break;
 
       case "/dashboard/history":
+      case "/dashboard/history/":
         filterHistory(e);
         break;
     }
@@ -38,7 +40,7 @@ export const SearchBar: FC = () => {
 
   return (
     <input
-      className="min-w-[10rem] w-full max-w-[30rem] shadow-sm text-gray-500 placeholder:text-gray-300 focus:outline-none text-xl p-2 px-4 rounded-xl"
+      className="min-w-[12rem] w-full max-w-[30rem] shadow-sm text-gray-500 placeholder:text-gray-300 focus:outline-none text-xl p-2 px-4 rounded-xl"
       placeholder="search"
       type="text"
       value={search}

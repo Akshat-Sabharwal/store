@@ -31,7 +31,7 @@ export const Modal = forwardRef<HTMLDivElement, ModalProps>(
         {...props}
       >
         <Overlay />
-        <div className="z-50 absolute left-[50%] top-[50%] translate-x-[-50%] translate-y-[-50%] max-w-[90%] sm:min-w-[25rem] rounded-xl bg-white p-6 pt-5">
+        <div className="z-50 absolute left-[50%] top-[50%] translate-x-[-50%] translate-y-[-50%] w-[95%] sm:min-w-[25rem] sm:w-fit max-w-[25rem] sm:max-w-[30rem] rounded-xl bg-white p-6 sm:px-8 pt-5">
           {children}
         </div>
       </div>
