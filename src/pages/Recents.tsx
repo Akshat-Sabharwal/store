@@ -17,7 +17,7 @@ export const Recents: FC = () => {
           <p className="text-3xl sm:text-4xl text-accent-600 select-none">
             recents
           </p>
-          <div className="flex justify-start items-start gap-6 flex-wrap size-full">
+          <div className="flex justify-start items-start gap-3 sm:gap-6 flex-wrap w-full">
             {buffer ? (
               <>
                 <FileSkeleton />

@@ -6,7 +6,7 @@ import { ReCaptchaV3Provider, initializeAppCheck } from "firebase/app-check";
 
 const firebaseConfig = {
   apiKey: "AIzaSyCmOvCx44lHCyy93Iz3ULxSIz39lVz-RjE",
-  authDomain: "learningfirebase-64df1.firebaseapp.com",
+  authDomain: "storage-drive.vercel.app",
   databaseURL:
     "https://learningfirebase-64df1-default-rtdb.asia-southeast1.firebasedatabase.app",
   projectId: "learningfirebase-64df1",
